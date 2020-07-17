@@ -6,11 +6,8 @@ import android.view.View
 import android.widget.TextView
 import android.content.Intent
 
-const val EXTRA_MESSAGE = "Go to Page Two !"
 
 class MainActivity : AppCompatActivity() {
-
-    val EXTRA_MESSAGE = "Go to Page Two !"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         var message = editText.text.toString()
         message = "hello"
         val intent = Intent(this, MainActivity2::class.java).apply {
-            putExtra(EXTRA_MESSAGE, message)
+            putExtra(Constant.EXTRA_MESSAGE, message)
         }
         startActivity(intent)
     }
